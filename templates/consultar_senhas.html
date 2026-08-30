@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bolsosenhas web consultar senhas wip</title>
+</head>
+<body>
+    <header class="main-header">Consultar Senhas</header>
+    <main>
+        {% if senhas %}
+        <ol class="lista-placeholder">
+            {% for item in senhas %}
+            <li>
+                <span>{{item[1]}} | ********</span>
+                <form action="/deletar" method="post">
+                    <input type="hidden" name="plataforma" value="{{item[1]}}">
+                    <input class="botao-placeholder" type="submit" value="Deletar">
+                </form>
+                <form action="/trocar" method="post">
+                    <input type="hidden" name="plataforma" value="{{item[1]}}">
+                    <input class="botao-placeholder" type="submit" value="Trocar">
+                </form>
+            </li>
+            {% endfor %}
+        </ol>
+        {% else %}
+        <p class="divs">Lista Vazia!</p>
+        {% endif %}
+        <div class="divs">
+            <a href="/">Voltar para home</a>
+        </div>
+    </main>
+</body>
+</html>

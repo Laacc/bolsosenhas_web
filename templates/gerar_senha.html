@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <link rel="stylesheet" href="{{url_for('static', filename='style.css')}}">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bolsosenhas gerar senha web wip</title>
+    <meta name="description" content="Página gerar senha de projeto de gerenciamento de senhas">
+</head>
+<body>
+    <header class="main-header"><h1>Gerar Senha</h1></header>
+    <main>
+        <form action="/gerar" method="post" class="forms">
+            <div class="divs">
+                <label for="plataforma">Insira a Plataforma: </label>
+                <input type="text" name="plataforma" id="plataforma" required/>
+            </div>
+            <div class="divs">
+                <input type="submit" value="Enviar">
+            </div>
+        </form>
+        <div class="divs">
+            <a href="/" class="botao">Voltar para home</a>
+        </div>
+    </main>
+</body>
+</html>
