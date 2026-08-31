@@ -1,44 +1,81 @@
-.main-header {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+:root {
+    --cor-botao: #FB8500;
+    --cor-botao-hover: #FB9500;
+    --cor-texto-botao: #1F1F23;
+    --cor-background: #262A33;
+    --cor-texto-solto: #F3F0E9;
 }
 
-.main-header ul {
+.botao {
+    display: inline-block;
+    border: none;
+    cursor: pointer;
+    text-align: center;
+    font-weight: bold;
+    background-color: var(--cor-botao);
+    color: var(--cor-texto-botao);
+}
+
+.botao:hover {
+    background-color: var(--cor-botao-hover);
+}
+
+.botao-principal {
+    border-radius: 4px;
+    font-size: 16px;
+    min-width: 150px;
+    max-width: 150px;
+    padding: 10px 20px;
+    text-decoration: none;
+}
+
+.botao-secundario {
+    border-radius: 8px;
+    font-size: 12px;
+    min-width: 60px;
+    padding: 6px 12px;
+}
+
+.lista-master {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.lista-ol {
     list-style: none;
     padding: 0;
+    flex-direction: column;
+    gap: 5px;
 }
 
-.lista-placeholder {
+.lista-consulta {
     list-style: none;
     padding: 0;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.div-master {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
+    padding: 3px;
 }
 
-.forms {
+.header1 {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-}
-
-.divs {
-    display:flex;
-    flex-direction:column;
-    justify-content: center;
-    align-items:center;
-    text-align: center;
-}
-
-.botao-placeholder {
-    display: flex;
     flex-direction: column;
-    justify-content: center;
+    padding: 200px;
+    font-family: Tahoma, Verdana, Geneva, sans-serif;
+    font-size: 32px 48px;
+    font-weight: bold;
+    color: var(--cor-texto-solto);
+}
+
+body {
+    background-color: var(--cor-background);
+    font-family: Tahoma, Verdana, Geneva, sans-serif;
 }

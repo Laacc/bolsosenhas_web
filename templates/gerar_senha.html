@@ -10,17 +10,17 @@
 <body>
     <header class="main-header"><h1>Gerar Senha</h1></header>
     <main>
-        <form action="/gerar" method="post" class="forms">
-            <div class="divs">
+        <form action="/gerar" method="post">
+            <div class="div-master">
                 <label for="plataforma">Insira a Plataforma: </label>
                 <input type="text" name="plataforma" id="plataforma" required/>
             </div>
-            <div class="divs">
-                <input type="submit" value="Enviar">
+            <div class="div-master">
+                <input class="botao botao-secundario" type="submit" value="Enviar">
             </div>
         </form>
-        <div class="divs">
-            <a href="/" class="botao">Voltar para home</a>
+        <div class="div-master">
+            <a href="/" class="botao botao-principal">Voltar para home</a>
         </div>
     </main>
 </body>

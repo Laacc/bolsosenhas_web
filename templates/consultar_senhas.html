@@ -7,20 +7,20 @@
     <title>bolsosenhas web consultar senhas wip</title>
 </head>
 <body>
-    <header class="main-header">Consultar Senhas</header>
+    <header><h1>Consultar Senhas</h1></header>
     <main>
         {% if senhas %}
-        <ol class="lista-placeholder">
+        <ol class="lista-master lista-ol">
             {% for item in senhas %}
-            <li>
+            <li class="lista-master lista-consulta">
                 <span>{{item[1]}} | ********</span>
                 <form action="/deletar" method="post">
                     <input type="hidden" name="plataforma" value="{{item[1]}}">
-                    <input class="botao-placeholder" type="submit" value="Deletar">
+                    <input class="botao botao-secundario" type="submit" value="Deletar">
                 </form>
                 <form action="/trocar" method="post">
                     <input type="hidden" name="plataforma" value="{{item[1]}}">
-                    <input class="botao-placeholder" type="submit" value="Trocar">
+                    <input class="botao botao-secundario" type="submit" value="Trocar">
                 </form>
             </li>
             {% endfor %}
@@ -28,8 +28,8 @@
         {% else %}
         <p class="divs">Lista Vazia!</p>
         {% endif %}
-        <div class="divs">
-            <a href="/">Voltar para home</a>
+        <div class="div-master">
+            <a class="botao botao-principal" href="/">Voltar para home</a>
         </div>
     </main>
 </body>
