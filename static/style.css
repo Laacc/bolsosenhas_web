@@ -68,11 +68,46 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 200px;
     font-family: Tahoma, Verdana, Geneva, sans-serif;
-    font-size: 32px 48px;
+    font-size: 32px;
     font-weight: bold;
     color: var(--cor-texto-solto);
+}
+
+.label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Tahoma, Verdana, Geneva, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--cor-texto-solto);
+    padding: 3px;
+}
+
+.span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Tahoma;
+    font-size: 20px;
+    font-weight: lighter;
+    color: var(--cor-texto-solto);
+    padding: 3px;
+}
+
+.paragrafo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: Tahoma;
+    font-size: 20px;
+    font-weight: lighter;
+    color: var(--cor-texto-solto);
+    padding: 3px;
 }
 
 body {

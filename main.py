@@ -36,6 +36,12 @@ def trocar_senha():
      gerenciador.trocar_senha(plataforma)
      return redirect(url_for('pagina_consultar_senhas'))
 
+@app.route("/copiar", methods=['POST'])
+def copiar_senha():
+     senha = request.form.get('senha')
+     gerenciador.copiar_senha(senha)
+     return redirect(url_for('pagina_consultar_senhas'))
+
 
 if __name__ == "__main__":
     app.run(debug=True)

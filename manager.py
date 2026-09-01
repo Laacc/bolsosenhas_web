@@ -2,6 +2,7 @@ import os
 import random
 import sqlite3
 import string
+import subprocess
 
 class GerenciadorSenhas:
     def __init__(self, caminho):
@@ -56,4 +57,8 @@ class GerenciadorSenhas:
             row_bool = cursor.rowcount
             con.commit()
             return row_bool == 1
+
+    def copiar_senha(self, senha):
+        subprocess.run("clip", input=senha, check=True, encoding="utf-8")
+        
 

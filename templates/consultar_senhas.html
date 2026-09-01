@@ -7,13 +7,13 @@
     <title>bolsosenhas web consultar senhas wip</title>
 </head>
 <body>
-    <header><h1>Consultar Senhas</h1></header>
+    <header class="header1"><h1>Consultar Senhas</h1></header>
     <main>
         {% if senhas %}
         <ol class="lista-master lista-ol">
             {% for item in senhas %}
             <li class="lista-master lista-consulta">
-                <span>{{item[1]}} | ********</span>
+                <span class="span">{{item[1]}} | ********</span>
                 <form action="/deletar" method="post">
                     <input type="hidden" name="plataforma" value="{{item[1]}}">
                     <input class="botao botao-secundario" type="submit" value="Deletar">
@@ -22,11 +22,15 @@
                     <input type="hidden" name="plataforma" value="{{item[1]}}">
                     <input class="botao botao-secundario" type="submit" value="Trocar">
                 </form>
+                <form action="/copiar" method="post">
+                    <input type="hidden" name="senha" value="{{item[2]}}">
+                    <input class="botao botao-secundario" type="submit" value="Copiar">
+                </form>
             </li>
             {% endfor %}
         </ol>
         {% else %}
-        <p class="divs">Lista Vazia!</p>
+        <p class="paragrafo">Lista Vazia!</p>
         {% endif %}
         <div class="div-master">
             <a class="botao botao-principal" href="/">Voltar para home</a>
